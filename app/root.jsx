@@ -1,4 +1,6 @@
 import { LiveReload } from "@remix-run/react";
+import { Outlet } from "@remix-run/react";
+import "./styles/index.css";
 
 export default function App() {
   return (
@@ -10,6 +12,7 @@ export default function App() {
       <body>
         Hello world
         <LiveReload />
+        <Outlet />
       </body>
     </html>
   );
