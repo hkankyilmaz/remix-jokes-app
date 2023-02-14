@@ -32,7 +32,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        Hello world
         <LiveReload />
         <Outlet />
       </body>
