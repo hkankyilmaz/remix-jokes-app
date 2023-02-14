@@ -1,15 +1,24 @@
 import { LiveReload } from "@remix-run/react";
 import { Outlet } from "@remix-run/react";
 import "../app/styles/index.css";
-
 import { Links } from "@remix-run/react";
-import stylesUrl from "./styles/index.css";
+
+import globalStylesUrl from "./styles/global.css";
+import globalMediumStylesUrl from "./styles/global-medium.css";
+import globalLargeStylesUrl from "./styles/global-large.css";
 
 export const links = () => {
   return [
+    { rel: "stylesheet", href: globalStylesUrl },
     {
       rel: "stylesheet",
-      href: stylesUrl,
+      href: globalMediumStylesUrl,
+      media: "print, (min-width: 640px)",
+    },
+    {
+      rel: "stylesheet",
+      href: globalLargeStylesUrl,
+      media: "screen and (min-width: 1024px)",
     },
   ];
 };
